@@ -1,32 +1,14 @@
 import { useEffect } from "preact/hooks";
-// import Button from "../lib/button.js";
-import { Elena } from "@elenajs/core";
 import { IS_BROWSER } from "fresh/runtime";
 
-export default function Counter() {
+export default function MainIsland() {
   useEffect(() => {
-    class Button extends Elena(HTMLElement) {
-      static override tagName = "elena-button";
-      static override shadow = "open" as const;
-    }
+    import("../lib/button.js");
+  }, []);
 
-    Button.define;
-    console.log("Hello World!");
-  });
+  if (!IS_BROWSER) {
+    return <button>Click me</button>;
+  }
 
-  // if (IS_BROWSER) {
-  return (
-    <div>
-      <elena-button>
-        <template shadowrootmode="open">
-          <link rel="stylesheet" href="button.css" />
-          <button>
-            <slot></slot>
-          </button>
-        </template>
-        Click me
-      </elena-button>
-    </div>
-  );
-  // }
+  return <my-button variant="primary">Save</my-button>;
 }
