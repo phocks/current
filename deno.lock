@@ -29,6 +29,7 @@
     "jsr:@std/uuid@^1.0.9": "1.1.0",
     "npm:@babel/core@^7.28.0": "7.29.0",
     "npm:@babel/preset-react@^7.27.1": "7.28.5_@babel+core@7.29.0",
+    "npm:@elenajs/core@^1.0.0-rc.12": "1.0.0-rc.12",
     "npm:@mjackson/node-fetch-server@0.7": "0.7.0",
     "npm:@opentelemetry/api@^1.9.0": "1.9.1",
     "npm:@preact/signals@^2.5.0": "2.9.0_preact@10.29.0",
@@ -345,6 +346,9 @@
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
       ]
+    },
+    "@elenajs/core@1.0.0-rc.12": {
+      "integrity": "sha512-YbYous/5x83O+GYHjbppTCiNZBZsYRov0F52J2TgwWBKSCIkWeUqa+SlgO7wj1+gu28tT0T7Bk+xfCjTrtZmsQ=="
     },
     "@esbuild/aix-ppc64@0.25.12": {
       "integrity": "sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==",
@@ -1428,6 +1432,7 @@
     "dependencies": [
       "jsr:@fresh/core@^2.2.2",
       "jsr:@fresh/plugin-vite@^1.0.8",
+      "npm:@elenajs/core@^1.0.0-rc.12",
       "npm:@preact/signals@^2.5.0",
       "npm:@tailwindcss/vite@^4.1.12",
       "npm:preact@^10.27.2",
