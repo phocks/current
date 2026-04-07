@@ -1,0 +1,35 @@
+/*@import "tailwindcss";*/
+/*.fresh-gradient {
+  background-color: rgb(134, 239, 172);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(219, 234, 254),
+    rgb(187, 247, 208),
+    rgb(254, 249, 195)
+  );*/
+
+
+@scope (my-button) {
+  :scope,
+  *:where(:not(img, svg):not(svg *)),
+  *::before,
+  *::after {
+    all: unset;
+    display: revert;
+  }
+  :scope {
+    --my-button-bg: pink;
+    display: inline-block;
+  }
+  :scope:not([hydrated]),
+  .my-button:is(button) {
+    background: var(--my-button-bg);
+    display: inline-flex;
+  }
+  :scope[variant="primary"] {
+    --my-button-bg: green;
+  }
+  :scope[variant="danger"] {
+    --my-button-bg: red;
+  }
+}
