@@ -4,7 +4,8 @@
     "build": "deno --unstable-bundle bundle.ts"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "preact": "npm:preact@^10.29.1"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
